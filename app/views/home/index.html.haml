@@ -1,2 +1,5 @@
 #home
-  %p insert content here
+  - unless artwork
+    %p No artworks!
+  - else
+    %p= artwork.description
