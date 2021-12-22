@@ -1,0 +1,70 @@
+$black: #0F0B0C
+$dark-brown: #362627
+$light-brown: #7A5C4F
+$gray: #6B625E
+
+$raleway-family: 'Raleway', sans-serif
+
+body
+  background-color: $black
+  font-family: $raleway-family
+  color: $gray
+  margin: 0
+  padding: 0
+
+  #wrapper::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    height: 200px
+    width: 100%
+    background: linear-gradient($dark-brown, $black)
+    z-index: -1
+
+  #wrapper
+    width: 900px
+    margin: 20px auto 0
+
+    header
+      margin-bottom: 30px
+      h1
+        text-align: center
+        margin: 0
+        padding: 0
+        font-size: 100px
+        text-shadow: 0 0 10px $black
+        a
+          color: $light-brown
+          text-decoration: none
+          text-transform: uppercase
+
+      aside
+        display: flex
+        justify-content: space-between
+
+        p
+          color: $light-brown
+          font-size: 26px
+          margin: 0
+          padding: 0
+
+          a
+            font-weight: 900
+            text-transform: uppercase
+            color: $light-brown
+    footer
+      border-top: 2px solid $gray
+      margin-top: 40px
+      padding-top: 20px
+      font-size: 16px
+
+      p
+        margin: 0
+        padding: 0
+        a
+          color: $gray
+
+    main
+      font-size: 18px
+      line-height: 24px

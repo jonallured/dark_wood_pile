@@ -4,8 +4,15 @@
     %title Dark Wood Pile
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}
+
     = csrf_meta_tags
     = csp_meta_tag
+
+    %link(rel="preconnect" href="https://fonts.googleapis.com")
+    %link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+
+    %link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,900;1,400&display=swap")
+
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
   %body
@@ -13,8 +20,9 @@
       %header
         %h1
           = link_to "Dark Wood Pile", "/"
-        %p Unique Carvings For Sale Each Week
-        = link_to "sign in", "/sign-in"
+        %aside
+          %p Unique Carvings For Sale Each Week
+          %p= link_to "sign in", "/sign-in"
       %main
         - if flash.any?
           %aside.flash
