@@ -1,12 +1,26 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title DarkWoodPile
-    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    %title Dark Wood Pile
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
   %body
-    = yield
+    #wrapper
+      %header
+        %h1
+          = link_to "Dark Wood Pile", "/"
+        %p Unique Carvings For Sale Each Week
+        = link_to "sign in", "/sign-in"
+      %main
+        - if flash.any?
+          %aside.flash
+            %ul
+              - flash.each do |type, message|
+                %li{class: type}= message
+        = yield
+      %footer
+        %p copyright #{Time.now.year} #{link_to "Jon Allured", "https://www.jonallured.com"}
