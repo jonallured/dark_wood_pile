@@ -15,12 +15,12 @@ gem "sassc-rails"
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
-gem 'decent_exposure'
+gem "decent_exposure"
 
 group :development, :test do
   gem "debug"
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
+  gem "rspec-rails"
+  gem "factory_bot_rails"
   gem "standard"
 end
 
