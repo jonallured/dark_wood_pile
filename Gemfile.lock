@@ -251,17 +251,16 @@ DEPENDENCIES
   haml-rails
   importmap-rails
   jbuilder
-  pg (~> 1.1)
-  puma (~> 5.0)
-  rails (~> 7.0.0)
-  redis (~> 4.0)
+  pg
+  puma
+  rails (= 7.0.0)
+  redis
   rspec-rails
   sassc-rails
   selenium-webdriver
   sprockets-rails
   stimulus-rails
   turbo-rails
-  tzinfo-data
   web-console
   webdrivers
 
