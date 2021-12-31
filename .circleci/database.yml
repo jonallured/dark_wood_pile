@@ -1,0 +1,7 @@
+test:
+  adapter: postgresql
+  database: dark_wood_pile_development
+  encoding: unicode
+  host: localhost
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
+  user: postgres
