@@ -21,6 +21,7 @@ group :development, :test do
   gem "debug"
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem "standard"
 end
 
 group :development do
