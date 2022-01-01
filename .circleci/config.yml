@@ -21,7 +21,7 @@ jobs:
 
       - run:
           name: Setup database
-          command: cp .circleci/database.yml config/database.yml && bundle exec rails db:create db:migrate
+          command: cp .circleci/database.yml config/database.yml && RAILS_ENV=test bundle exec rails db:create db:migrate
 
       - run:
           name: Run tests
