@@ -13,7 +13,6 @@ jobs:
       - image: circleci/postgres:13.4-ram
         environment:
           POSTGRES_USER: root
-          POSTGRES_DB: dark_wood_pile_test
           POSTGRES_HOST_AUTH_METHOD: trust
 
     steps:
