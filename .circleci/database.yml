@@ -3,5 +3,4 @@ test:
   database: dark_wood_pile_test
   encoding: unicode
   host: localhost
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
-  user: postgres
+  user: root

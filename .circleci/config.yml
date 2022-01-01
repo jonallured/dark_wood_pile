@@ -12,7 +12,8 @@ jobs:
           RAILS_ENV: test
       - image: circleci/postgres:13.4-ram
         environment:
-          POSTGRES_PASSWORD: password
+          POSTGRES_USER: root
+          POSTGRES_DB: dark_wood_pile_test
 
     steps:
       - checkout
