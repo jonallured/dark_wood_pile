@@ -19,14 +19,6 @@ jobs:
       - ruby/install-deps
 
       - run:
-          name: Update Chrome
-          command: bundle exec rake webdrivers:chromedriver:update
-
-      - run:
-          name: Wait for database
-          command: dockerize -wait tcp://localhost:5432 -timeout 1m
-
-      - run:
           name: Setup database
           command: cp .circleci/database.yml config/database.yml && bundle exec rake db:create db:migrate
 
