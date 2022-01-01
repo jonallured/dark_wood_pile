@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  ruby: circleci/ruby@1.0
+  ruby: circleci/ruby@1.2
 
 jobs:
   default:
@@ -11,6 +11,8 @@ jobs:
         environment:
           RAILS_ENV: test
       - image: circleci/postgres:13.4-ram
+        environment:
+          POSTGRES_PASSWORD: ""
 
     steps:
       - checkout
